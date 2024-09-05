@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>My Photography Portfolio</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <img src="{{ url_for('static', filename='/assets/Banner.jpeg') }}" alt="Hero Image">
+        <h2>Capturing Moments</h2>
+        <p>Explore my collection of photographs from around the world.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="photo-grid">
+            <div class="photo"><img src="{{ url_for('static', filename='/assets/img/IMG_6874.jpeg') }}" alt="Photo 1"></div>
+            <div class="photo"><img src="{{ url_for('static', filename='/assets/img/IMG_7943.heic') }}" alt="Photo 2"></div>
+            <div class="photo"><img src="{{ url_for('static', filename='/assets/img/IMG_6689.heic') }}" alt="Photo 3"></div>
+            <div class="photo"><img src="{{ url_for('static', filename='/assets/img/Purple_Lambo.heic') }}" alt="Photo 4"></div>
+            <div class="photo"><img src="https://via.placeholder.com/300" alt="Photo 5"></div>
+            <div class="photo"><img src="https://via.placeholder.com/300" alt="Photo 6"></div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm a passionate photographer with a love for capturing the beauty of the world through my lens. I specialize in landscape and portrait photography.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me at <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Photography Portfolio</p>
+    </footer>
+</body>
+</html>
