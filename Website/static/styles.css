@@ -128,3 +128,20 @@ button:hover {
 .contact-info p, .contact-info ul {
     word-wrap: break-word; /* Ensure long text breaks correctly */
 }
+
+#contact h3 {
+    text-align: center;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form form {
+    text-align: center;
+}
