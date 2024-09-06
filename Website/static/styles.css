@@ -16,11 +16,16 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    position: absolute;
+    position: relative; /* Change from absolute to relative */
     width: 100%;
     z-index: 10;
-    background-color: white; /* Added to make the header white */
-    opacity: 0.8; /* Slight transparency for better aesthetic */
+    background-color: white;
+    opacity: 0.9;
+    box-shadow: 0px 4px 2px -2px gray; /* Add a shadow for better visibility */
+}
+
+section#contact {
+    margin-top: 10px; /* Add a margin to prevent overlap */
 }
 
 nav a {
@@ -61,7 +66,7 @@ nav a {
     grid-template-columns: repeat(2, 1fr); /* Two equal columns */
     grid-template-rows: repeat(2, 50vh); /* Adjust to control row height */
     gap: 10px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .grid-item {
@@ -74,4 +79,52 @@ nav a {
     height: 100%;
     object-fit: cover; /* Fills grid item without distorting the image */
     object-position: center;
+}
+
+.contact-info ul {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin: 10px 0; /* Add some margin between items */
+    font-size: 16px; /* Adjust font size */
+}
+
+.contact-form {
+    max-width: 600px; /* Limit the width of the form */
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Add space between form fields */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.contact-info p, .contact-info ul {
+    word-wrap: break-word; /* Ensure long text breaks correctly */
 }
