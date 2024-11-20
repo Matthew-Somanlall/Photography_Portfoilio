@@ -1,63 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Matthew Somanlall Photography</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <a href="/portfolio">Portfolio</a>
-            <a href="/contacts">Contacts</a>
-        </nav>
-        <div class="name">
-            <h2>Matthew Somanlall</h2>
-        </div>
+      <nav>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/contacts">Contacts</a>
+      </nav>
+      <div class="name">
+        <h2>Matthew Somanlall</h2>
+      </div>
     </header>
 
     <section id="contact">
-        <div class="container">
-            <h3>Contact Me</h3>
+      <div class="container">
+        <section id="gallery">
+          <div class="image-column">
+            <img src="{{ url_for('static', filename='/assets/img/_MG_8681.jpeg') }}" alt="Photo 1">
+          </div>
+          <div class="image-column">
+            <!-- Contact Information -->
+            <div class="contact-info">
+              <p>If you'd like to get in touch, please feel free to reach out using the form below or through the contact details provided.</p>
+              <p>Email: <a href="mailto:matthew.somanlall@student.tdsb.on.ca">matthew.somanlall@student.tdsb.on.ca</a></p>
+              <p>Phone: (647) 482-3369</p>
+              <p>Location: Toronto, ON</p>
+            </div>
 
-            <section id="gallery">
-                <div class="image-column">
-                    <img src="{{ url_for('static', filename='/assets/img/_MG_8681.jpeg') }}" alt="Photo 1">
-                </div>
-                <div class="image-column">
-                    <div class="contact-info">
-                        <h1>If you'd like to get in touch, please feel free to reach out using the form below or through the contact details provided.</h1>
-                        <ul>
-                            <h1>Email: <a href="mailto:matthew.somanlall@student.tdsb.on.ca">matthew.somanlall@student.tdsb.on.ca</a></h1>
-                            <h1>Phone: (647) 482-3369</h1>
-                            <h1>Location: Toronto, ON</h1>
-                        </ul>
-                    </div>
+            <!-- Contact Form -->
+            <form action="submit_form.php" method="POST">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-                    <div class="contact-form">
-                        <form action="/submit-contact" method="POST">
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-                            <div class="form-group">
-                                <label for="email">Your Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
-                            <div class="form-group">
-                                <label for="message">Your Message</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-
-                            <button type="submit">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-        </div>
+              <input type="submit" value="Send Message">
+            </form>
+          </div>
+        </section>
+      </div>
     </section>
-</body>
+    <footer>
+        <p>&copy; 2024 Matthew Somanlall</p>
+    <footer>
+  </body>
 </html>
